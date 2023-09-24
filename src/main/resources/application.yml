@@ -1,0 +1,17 @@
+server:
+    port: 8088
+
+spring:
+    application:
+      name: MOVIE-SERVICE
+    datasource:
+        url: jdbc:postgresql://localhost:5432/movieservice
+        username: postgres
+        password: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+    config:
+      import: configserver:http://localhost:8085    
+   
